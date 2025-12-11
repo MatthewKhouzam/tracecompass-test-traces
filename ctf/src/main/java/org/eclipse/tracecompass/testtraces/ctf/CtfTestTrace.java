@@ -538,7 +538,37 @@ public enum CtfTestTrace {
      * Trace length: 0
      * </pre>
      */
-    CTF2_VL_INTS("/CTF2-vl-ints", 1, 0);
+    CTF2_VL_INTS("/CTF2-vl-ints", 1, 0),
+    /**
+     * Data test trace collected from yactfr:
+     * https://github.com/eepp/yactfr/blob/master/tests/tests-iter-data/ctf-2/pass-vl-ints.streams
+     * 
+     * Please note that this is a data test trace, therefore it does not contain non-data features 
+     * such as attributes or a preferred display integer base.
+     *
+     * <pre>
+     * Trace Size: 5.5 MB
+     * Tracer: LTTng-2.15
+     * Event count: 164965
+     * Trace length: ~.1s
+     * </pre>
+     */
+    CTF2_kernel("/CTF2-lttng-2.15/kernel", 164965, 0),
+    /**
+     * Data test trace collected from yactfr:
+     * https://github.com/eepp/yactfr/blob/master/tests/tests-iter-data/ctf-2/pass-vl-ints.streams
+     * 
+     * Please note that this is a data test trace, therefore it does not contain non-data features 
+     * such as attributes or a preferred display integer base.
+     *
+     * <pre>
+     * Trace Size: 227 kB
+     * Tracer: LTTng 2.15
+     * Event count: 122
+     * Trace length: ~.1s
+     * </pre>
+     */
+    CTF2_UST("/CTF2-lttng-2.15/ust", 122, 0);
 
     private final String fTraceName;
     private final int fNbEvent;
